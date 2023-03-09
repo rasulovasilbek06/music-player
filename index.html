@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/range-input.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./album/icon.png" type="image/x-icon" />
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">INNA - Amazing</div>
+        <div class="img-container">
+            <img src="./album/INNA - Amazing.jpg" alt="album cover" class="cover" />
+        </div>
+
+        <div class="time">
+            <span id="start">00 : 00</span>
+            <span id="end">00 : 00</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress"></div>
+        </div>
+
+        <form class="volume-form">
+            <span style="cursor: pointer"><i id="volume-icon" class="fas fa-volume-high"></i></span>
+            <input class="styled-slider slider-progress" type="range" id="volume" name="volume" min="0" max="10"
+                step="1" value="10" />
+        </form>
+        <audio src="musics/INNA - Amazing.mp3"></audio>
+
+        <div class="navigation">
+            <button class="btn prev">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button class="btn btn-big play">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="btn next">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

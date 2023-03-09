@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css2?family=Varela&display=swap);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Varela', sans-serif;
+    background-color: #fff;
+    background: url('../album/background.jpg') no-repeat;
+    background-position: center;
+    user-select: none;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 50px;
+    padding: 50px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px 10px #fff;
+    text-shadow: 2px 2px 5px #000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.title {
+    height: 82px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.img-container {
+    height: 220px;
+    width: 220px;
+    margin-top: -30px;
+}
+
+.cover {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: rotation 5s linear infinite;
+    animation-play-state: paused;
+
+}
+
+.time {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    margin-bottom: -45px;
+    user-select: none;
+}
+
+.progress-container {
+    width: 80%;
+    background-color: #fff;
+    height: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: -35px;
+}
+
+.progress {
+    width: 0;
+    background-color: #4D535A;
+    height: 8px;
+    border-radius: inherit;
+}
+
+.volume-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: -35px;
+
+}
+
+.volume-form span {
+    width: 22px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.btn {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color: fff;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-big {
+    font-size: 2.2rem;
+}
+
+.container.play .cover {
+    animation-play-state: running;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
